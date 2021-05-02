@@ -1,0 +1,14 @@
+Label {
+    font-size: 14px;
+    color: rgb(190, 190, 190);
+}
+
+#menu-Label {
+    font-size: 10px;
+    color: blue;
+}
+
+.label-menu {
+    -unity-font-style: normal;
+    font-size: 11px;
+}

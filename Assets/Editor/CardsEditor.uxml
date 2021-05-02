@@ -1,0 +1,34 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="CardsEditor.uss" />
+    <uie:Toolbar style="justify-content: space-between;">
+        <ui:VisualElement name="toolbar-left" style="flex-direction: row;">
+            <uie:ToolbarMenu display-tooltip-when-elided="true" name="add-remove-menu">
+                <ui:Label text="Add / Remove" display-tooltip-when-elided="true" name="menu-label" class="label-menu" style="left: auto; flex-direction: column; flex-shrink: 0;" />
+            </uie:ToolbarMenu>
+            <uie:ToolbarSpacer />
+            <uie:ToolbarSearchField focusable="true" name="name-search-field" />
+        </ui:VisualElement>
+        <uie:ToolbarButton text="Save all Changes" display-tooltip-when-elided="true" name="save-button" style="font-size: 11px;" />
+    </uie:Toolbar>
+    <ui:VisualElement name="columns-container" style="flex-grow: 1; flex-direction: row;">
+        <ui:VisualElement name="left-column" style="flex-direction: column; flex-shrink: 0; align-items: auto; width: 150px; height: 100%; background-color: rgb(42, 42, 42);">
+            <ui:ListView focusable="true" name="cards-list" style="flex-grow: 1; width: 100%; height: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="right-column" style="flex-direction: row; flex-grow: 1;">
+            <ui:VisualElement name="card-stats" style="flex-direction: column; width: auto; flex-grow: 1;">
+                <ui:TextField picking-mode="Ignore" label="Name:" text="&#10;" name="card-name-field" multiline="false" binding-path="m_Name" tooltip="Make sure to save the changes, else the asset won&apos;t be renamed" style="margin-left: 15px; margin-right: 15px; margin-top: 15px; font-size: 18px; -unity-font-style: bold;" />
+                <ui:TextField picking-mode="Ignore" label="Description:" name="card-description-field" multiline="true" tooltip="The cards description" style="margin-left: 15px; margin-right: 15px; margin-top: 15px;" />
+                <ui:Foldout text="  Card Values" name="stats-foldout" style="margin-top: 20px; font-size: 16px;">
+                    <uie:IntegerField label="Attack" value="0" name="attack-value" style="margin-right: 15px; flex-shrink: 0; flex-direction: row; width: 200px;" />
+                    <uie:IntegerField label="Defense" value="0" name="defense-value" style="margin-right: 15px; flex-shrink: 0; flex-direction: row; width: 200px;" />
+                    <uie:IntegerField label="Manacost" value="0" name="manacost-value" style="margin-right: 15px; flex-shrink: 0; flex-direction: row; width: 200px;" />
+                    <uie:EnumField label="Card Tier" name="card-tier" binding-path="cardTier" style="width: 250px;" />
+                </ui:Foldout>
+            </ui:VisualElement>
+            <ui:VisualElement name="card-image-container" style="flex-grow: 0; align-items: flex-end; width: 300px;">
+                <ui:VisualElement name="card-image" style="width: 250px; height: 400px; align-items: stretch; margin-right: 25px; margin-top: 25px;" />
+                <uie:ObjectField name="card-image-field" label="Card Sprite" allow-scene-objects="false" type="UnityEngine.Sprite, UnityEngine.CoreModule" binding-path="cardSprite" style="padding-right: 20px; padding-top: 15px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

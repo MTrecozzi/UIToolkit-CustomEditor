@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1178123be964949ad5458bcb0e1001, type: 3}
+  m_Name: Furion
+  m_EditorClassIdentifier: 
+  attackValue: 20
+  defenseValue: 10
+  manaCost: 7
+  description: The best hero in the game
+  cardSprite: {fileID: 21300000, guid: e1a1c1f635c4e2244a5296cc357a8659, type: 3}
+  cardTier: 2
