@@ -14,3 +14,6 @@ Features:
 - Preview/change the sprite associated with the card
 - Search bar to look for cards by name
 - Toolbar dropdown menu
+
+
+![Editor](https://user-images.githubusercontent.com/75497234/116817374-58d06b80-ab66-11eb-9014-2f6d099ccf06.PNG)
